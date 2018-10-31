@@ -31,7 +31,7 @@ public class Drop extends ApplicationAdapter {
     private long lastDropTime;
     private int score;
     private int highScore;
-    private BitmapFont yourBitmapFontName;
+    private BitmapFont mineBitmapFontName;
     private int misses;
 	
 	@Override
@@ -62,7 +62,7 @@ public class Drop extends ApplicationAdapter {
 	    highScore = 0;
 	    misses = 0;
 
-	    yourBitmapFontName = new BitmapFont();
+	    mineBitmapFontName = new BitmapFont();
 	}
 
 	private void spawnRaindrop() {
@@ -89,10 +89,10 @@ public class Drop extends ApplicationAdapter {
         for(Rectangle raindrop: raindrops) {
             batch.draw(dropImage, raindrop.x, raindrop.y);
         }
-        yourBitmapFontName.setColor(1.0f, 1.0f, 1.0f, 1.0f);
-        yourBitmapFontName.draw(batch, "score " + score, 25, 400);
-        yourBitmapFontName.draw(batch, "misses" + misses, 25, 350);
-        yourBitmapFontName.draw(batch, "highScore" + highScore, 700, 400);
+        mineBitmapFontName.setColor(1.0f, 1.0f, 1.0f, 1.0f);
+        mineBitmapFontName.draw(batch, "score " + score, 25, 400);
+        mineBitmapFontName.draw(batch, "misses" + misses, 25, 350);
+        mineBitmapFontName.draw(batch, "highScore" + highScore, 700, 400);
         batch.end();
 
         if (Gdx.input.isTouched()) {

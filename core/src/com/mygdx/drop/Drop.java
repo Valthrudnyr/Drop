@@ -91,8 +91,8 @@ public class Drop extends ApplicationAdapter {
         }
         mineBitmapFontName.setColor(1.0f, 1.0f, 1.0f, 1.0f);
         mineBitmapFontName.draw(batch, "score " + score, 25, 400);
-        mineBitmapFontName.draw(batch, "misses" + misses, 25, 350);
-        mineBitmapFontName.draw(batch, "highScore" + highScore, 700, 400);
+        mineBitmapFontName.draw(batch, "misses " + misses, 25, 350);
+        mineBitmapFontName.draw(batch, "highScore " + highScore, 700, 400);
         batch.end();
 
         if (Gdx.input.isTouched()) {
